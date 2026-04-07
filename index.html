@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI & ANN Tech Talk 2K26 | IEEE HITSB</title>
+
+<!-- Meta tags for sharing -->
+<meta name="description" content="AI & ANN Tech Talk 2K26 organized by IEEE HITSB. Verify your attendance certificate here."/>
+
+<!-- WhatsApp & LinkedIn preview -->
+<meta property="og:title"       content="AI & ANN Tech Talk 2K26 | IEEE HITSB"/>
+<meta property="og:description" content="A deep dive into Artificial Intelligence & Artificial Neural Networks. Organized by IEEE HITSB on April 7, 2026."/>
+<meta property="og:image"       content="logo.png"/>
+<meta property="og:url" content="https://Demo.netlify.app"/>
+<meta property="og:type"        content="website"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+  <img src="logo.png" alt="IEEE HIT SB" style="height:52px; width:auto;"/>
+  <span style="font-size:13px; color:var(--cyan); margin-left:10px; font-family:'JetBrains Mono',monospace;">Organized by IEEE HIT SB</span>
+</div>
+<button onclick="toggleTheme()" id="theme-btn"
+  style="position:fixed;
+ top:100px;
+right:30px;
+  z-index:999;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);
+  transition:all .3s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;">🌙</button>
+      <button id="hamburger" onclick="toggleMenu()" 
+  style="display:none;background:transparent;border:1px solid var(--border);
+  color:var(--text);width:40px;height:40px;border-radius:8px;
+  font-size:18px;cursor:pointer;align-items:center;justify-content:center;">☰</button>
+
+<div class="nav-links" id="nav-links">
+  <a href="#about"    onclick="closeMenu()">About</a>
+  <a href="#speaker"  onclick="closeMenu()">Speaker</a>
+  <a href="#verify"   onclick="closeMenu()">Verify</a>
+  <a href="https://www.linkedin.com/company/ieee-hit-student-branch/" target="_blank" onclick="closeMenu()">IEEE HITSB</a>
+</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-tag reveal">
+        <span class="tag-dot"></span> April 7, 2026 &nbsp;·&nbsp; Live on Zoom
+      </div>
+      <h1 class="hero-title reveal">
+<span class="title-line"><span id="typed-line1"></span></span>
+<span class="title-line"><span id="typed-line2"></span><span class="cursor" id="cursor">|</span></span>
+      </h1>
+      <p class="hero-sub reveal">
+        A deep dive into Artificial Intelligence &amp; Artificial Neural Networks —
+        exploring the architectures shaping the future of intelligent systems.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#verify" class="btn-primary">Verify Certificate</a>
+        <a href="#speaker" class="btn-ghost">Meet the Speaker ↓</a>
+      </div>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat-pill">🎓 430+ Registrations</div>
+      <div class="stat-pill">🌐 Online · Zoom</div>
+      <div class="stat-pill">🤖 AI &amp; ANN</div>
+    </div>
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-tag reveal">// about the event</div>
+      <h2 class="section-title reveal">What was this<br/><span class="accent">Tech Talk</span> about?</h2>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-icon">🧠</div>
+          <h3>Artificial Intelligence</h3>
+          <p>Explored foundations and modern applications of AI — from rule-based systems to deep learning paradigms shaping industries today.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon">🔗</div>
+          <h3>Neural Networks</h3>
+          <p>Dived deep into ANN architectures — how neurons connect, how networks learn from data, and the math powering intelligent decisions.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon">📡</div>
+          <h3>Live on Zoom</h3>
+          <p>Held live with 430+ students — an open Q&amp;A gave attendees a chance to interact directly with the speaker in real time.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-bottom:28px;">
+<span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);
+    color:#00d4ff;padding:10px 24px;border-radius:100px;
+    font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:1px;"
+    class="concluded-badge">
+    <span class="concluded-line1">✅ Event Concluded</span>
+    <span class="concluded-dot"> &nbsp;·&nbsp; </span>
+<span id="days-ago"></span>
+<span class="concluded-dot"> &nbsp;·&nbsp; </span>
+<span class="concluded-line2">430+ Attended</span>
+</span>
+</div>
+      <div class="event-strip reveal">
+        <div class="strip-item">
+          <span class="strip-icon">📅</span>
+          <div><div class="strip-label">Date</div><div class="strip-val">April 7, 2026</div></div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <span class="strip-icon">🕖</span>
+          <div><div class="strip-label">Time</div><div class="strip-val">7:15 PM IST</div></div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <span class="strip-icon">💻</span>
+          <div><div class="strip-label">Platform</div><div class="strip-val">Zoom (Online)</div></div>
+        </div>
+        <div class="strip-divider"></div>
+        <div class="strip-item">
+          <span class="strip-icon">👥</span>
+          <div><div class="strip-label">Registered</div><div class="strip-val">430+ Students</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="reveal" style="margin-top:40px;">
+  <h3 style="font-family:'Syne',sans-serif;font-size:22px;margin-bottom:20px;">
+    🎯 Key Takeaways
+  </h3>
+  <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+    <li style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--muted);font-size:14px;">
+      ✦ How AI mimics human thinking
+    </li>
+    <li style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--muted);font-size:14px;">
+      ✦ ANN layers, weights & backpropagation
+    </li>
+    <li style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--muted);font-size:14px;">
+      ✦ Real-world ANN use cases
+    </li>
+    <li style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--muted);font-size:14px;">
+      ✦ Future of Neural Networks
+    </li>
+  </ul>
+</div>
+
+  <!-- SPEAKER -->
+  <section id="speaker">
+    <div class="container">
+      <div class="section-tag reveal">// meet the speaker</div>
+      <h2 class="section-title reveal">The mind<br/>behind the talk</h2>
+      <div class="speaker-card reveal">
+        <div class="speaker-left">
+          <div class="speaker-img-wrap">
+            <img src="https://pure.urosario.edu.co/files-asset/94389956/alvaro_orjuela.jpg"
+              alt="Alvaro David Orjuela-Cañón" class="speaker-img"
+              onerror="this.src='https://ui-avatars.com/api/?name=Alvaro+Orjuela&background=0a2540&color=00d4ff&size=300'"/>
+            <div class="img-ring"></div>
+          </div>
+          <a href="https://www.linkedin.com/in/alvaro-david-orjuela-ca%C3%B1%C3%B3n" target="_blank" rel="noopener" class="linkedin-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+        <div class="speaker-right">
+          <div class="speaker-badge">Featured Speaker</div>
+          <h3 class="speaker-name">Alvaro David<br/>Orjuela-Cañón</h3>
+          <p class="speaker-title">PhD · Associate Professor</p>
+          <p class="speaker-org">Universidad del Rosario · Bogotá, Colombia</p>
+          <p class="speaker-bio">A leading researcher in AI and Neural Networks with 108+ published works. His expertise spans ANN architectures, EEG signal analysis, machine learning, and biomedical AI — making him one of the foremost voices in applied neural computation.</p>
+          <div class="speaker-stats">
+            <div class="sp-stat"><div class="sp-num">808</div><div class="sp-lbl">Citations</div></div>
+            <div class="sp-stat"><div class="sp-num">14</div><div class="sp-lbl">h-index</div></div>
+            <div class="sp-stat"><div class="sp-num">108+</div><div class="sp-lbl">Papers</div></div>
+            <div class="sp-stat"><div class="sp-num">14</div><div class="sp-lbl">Projects</div></div>
+          </div>
+          <div class="speaker-chips">
+            <span>Neural Networks</span><span>Artificial Intelligence</span>
+            <span>EEG Analysis</span><span>Machine Learning</span><span>Time Series</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);padding:80px 0;">
+  <div class="container">
+    <div class="section-tag reveal">// event gallery</div>
+    <h2 class="section-title reveal">Event <span class="accent">Glimpses</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:16px;" class="reveal">
+      <img src="p1.png" style="width:100%;border-radius:14px;border:1px solid var(--border);object-fit:cover;height:200px;"/>
+      <img src="p2.jpeg" style="width:100%;border-radius:14px;border:1px solid var(--border);object-fit:cover;height:200px;"/>
+      <img src="p3.png" style="width:100%;border-radius:14px;border:1px solid var(--border);object-fit:cover;height:200px;"/>
+       <img src="P4.png" style="width:100%;border-radius:14px;border:1px solid var(--border);object-fit:cover;height:200px;"/>
+    </div>
+  </div>
+</section>
+
+  <!-- VERIFY -->
+  <section id="verify">
+    <div class="container">
+      <div class="section-tag reveal">// certificate verification</div>
+      <h2 class="section-title reveal">Verify your<br/><span class="accent">certificate</span></h2>
+      <p class="section-sub reveal">Enter the unique Certificate ID printed on your certificate to verify its authenticity.</p>
+
+      <div class="verify-wrap">
+        <!-- Input box -->
+        <div class="verify-box reveal" id="input-box">
+          <div class="vbox-glow"></div>
+          <div class="vbox-inner">
+            <div class="vbox-icon">🔐</div>
+            <p class="vbox-label">Enter Certificate ID</p>
+            <div class="input-row">
+              <input type="text" id="cert-input" placeholder="AI26-XXXX"
+                maxlength="12" autocomplete="off" spellcheck="false"/>
+              <button id="verify-btn" onclick="verify()">
+                <span id="btn-text">Verify</span>
+                <span id="btn-loader" class="hidden"><span class="spinner"></span></span>
+              </button>
+            </div>
+            <p class="vbox-hint">The Certificate ID is printed at the bottom of the certificate.</p>
+          </div>
+        </div>
+
+        <!-- Result box -->
+        <div class="verify-box hidden" id="result-box">
+          <div class="vbox-glow"></div>
+          <div class="vbox-inner">
+            <div class="result-emoji" id="result-emoji"></div>
+            <h3 class="result-title" id="result-title"></h3>
+            <p class="result-sub" id="result-sub"></p>
+            <div class="result-rows" id="result-rows"></div>
+            <button class="btn-reset" onclick="reset()">↩ Verify Another Certificate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+     <div class="footer-brand">
+  <span class="logo-bracket">&lt;</span>
+  <span id="footer-typed"></span><span class="cursor">|</span>
+  <span id="footer-typed"></span>
+  <span class="logo-bracket">/&gt;</span> 2K26
+  
+</div>
+      <p>AI &amp; ANN Tech Talk · April 7, 2026 · HIT · Zoom</p>
+      <p class="footer-small">Certificate system powered by Google Sheets &amp; GitHub Pages</p>
+      <a href="https://www.linkedin.com/company/ieee-hit-student-branch/" target="_blank"
+   style="color:#00d4ff; font-size:12px; text-decoration:none; margin-top:8px; display:inline-block;">
+  🔗 IEEE HITSB on LinkedIn
+</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <div id="toast" style="position:fixed;bottom:30px;right:30px;background:#00d4ff;color:#000;
+  padding:14px 22px;border-radius:12px;font-weight:700;font-size:14px;
+  transform:translateY(80px);opacity:0;transition:all .4s;z-index:999;">
+  ✅ Certificate Verified!
+  
+</div>
+
+</body>
+</html>
