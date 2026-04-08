@@ -1,4 +1,4 @@
-# 🎓 AI & ANN Tech Talk 2K26 — Certificate Verification System
+# 🎓 Certificate Verification System
 
 A web-based certificate verification platform developed for the **AI & ANN Tech Talk 2K26**, organized by IEEE HIT Student Branch.
 
